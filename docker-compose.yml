@@ -1,0 +1,12 @@
+
+version: "3.8"
+
+services:
+  ncwms:
+    container_name: ncwms
+    image: guygriffiths/ncwms
+    ports:
+      - 8080:8080
+    volumes: 
+      - ./config/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - ./config/ncwms:/usr/local/tomcat/.ncWMS2
