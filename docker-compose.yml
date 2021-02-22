@@ -8,5 +8,7 @@ services:
     ports:
       - 8080:8080
     volumes: 
+      - ./config/context.xml:/usr/local/tomcat/conf/context.xml
       - ./config/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
       - ./config/ncwms:/usr/local/tomcat/.ncWMS2
+      - ./datasets:/datasets
