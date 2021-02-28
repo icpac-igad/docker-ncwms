@@ -1,2 +1,3 @@
 config/ncwms
 datasets
+.env

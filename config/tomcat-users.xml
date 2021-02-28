@@ -35,5 +35,5 @@
   them. You will also need to set the passwords to something appropriate.
 -->
   <role rolename="ncWMS-admin" />
-  <user username="ncwms" password="hashpasswordhere" roles="ncWMS-admin"/>
+  <user username="ncwms" password="7b902e6ff1db9f560443f2048974fd7d386975b0" roles="ncWMS-admin"/>
 </tomcat-users>

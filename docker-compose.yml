@@ -4,11 +4,13 @@ version: "3.8"
 services:
   ncwms:
     container_name: ncwms
-    image: guygriffiths/ncwms
+    build: .
+    image: ${IMAGE_URI}
+    restart: always
     ports:
-      - 8080:8080
+      - ${PORT}:8080
     volumes: 
       - ./config/context.xml:/usr/local/tomcat/conf/context.xml
       - ./config/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
-      - ./config/ncwms:/usr/local/tomcat/.ncWMS2
-      - ./datasets:/datasets
+      - ${CONFIG_VOLUME}:/usr/local/tomcat/.ncWMS2
+      - ${DATASETS_VOLUME}:/opt/tomcat/EACW_DATA
